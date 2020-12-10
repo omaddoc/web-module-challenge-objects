@@ -66,7 +66,19 @@ export const burger = {
   price: 18,
   category: "Lunch",
   /*Your code here*/
+  discount: function (person) {
+    let discount = 0;
+    if (person === "teacher" || person === "student") {
+      discount = 0.25;
+    } else {
+      discount = 0.1;
+    }
+    let newPrice = this.price - discount * this.price;
+    return newPrice;
+  },
 };
+
+console.log("Task 2", burger.discount("public"));
 
 ///////////////Reviews (MVP)///////////////////
 const reviews = [

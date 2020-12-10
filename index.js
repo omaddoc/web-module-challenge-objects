@@ -144,6 +144,11 @@ Reyna's feedback is missing! Use what you know to do the following: (no function
   1. Add this feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
   2. log the reviews array to the console to check your work
 */
+reviews[7].rating =
+  "this place is chill with really cool people, great for getting work done on weekdays";
+
+console.log("Task 5", reviews[7]);
+// console.log(reviews.filter((name) => name === "Reyna"));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Write a function to return a review based on the index of the review in the array.
@@ -155,9 +160,12 @@ Use the getReviewByIndex function below to do the following:
   For example: getReviewByIndex(reviews,0) would return: "Daniela gave the restaurant a 5 star review, and their feedback was: Beautiful atmosphere and wonderful vegan options!"
 */
 
-function getReviewByIndex(/*Your code here*/) {
+function getReviewByIndex(arr, num) {
   /*Your code here*/
+  return `${arr[num].name} gave the restaurant a ${arr[num].rating} star review, and their feedback was: ${arr[num].feedback}`;
 }
+
+console.log("Task 6", getReviewByIndex(reviews, 8));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Write a function to get information about the most recent (last) review called `getLastReview`
